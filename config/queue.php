@@ -72,6 +72,19 @@ return [
             'after_commit' => false,
         ],
 
+        'connections' => [
+            'rabbitmq' => [
+                'driver' => 'rabbitmq',
+                'factory_class' => Enqueue\AmqpLib\AmqpConnectionFactory::class,
+                'host' => env('RABBITMQ_HOST', '127.0.0.1'),
+                'port' => env('RABBITMQ_PORT', 5672),
+                'user' => env('RABBITMQ_USER', 'guest'),
+                'password' => env('RABBITMQ_PASSWORD', 'guest'),
+                'queue' => env('RABBITMQ_QUEUE', 'default'),
+            ],
+        ],
+
+
     ],
 
     /*
