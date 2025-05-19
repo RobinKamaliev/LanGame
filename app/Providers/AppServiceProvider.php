@@ -2,21 +2,17 @@
 
 namespace App\Providers;
 
+use App\Clients\Telegram\TelegramApiClient;
+use App\Clients\Telegram\TelegramClientInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
     public function register(): void
     {
-        //
+        $this->app->bind(TelegramClientInterface::class, TelegramApiClient::class);
     }
 
-    /**
-     * Bootstrap any application services.
-     */
     public function boot(): void
     {
         //
