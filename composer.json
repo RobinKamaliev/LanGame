@@ -7,8 +7,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "enqueue/amqp-lib": "^0.10.26",
+        "laravel/framework": "^11.0",
+        "laravel/reverb": "^1.5",
+        "laravel/sanctum": "^4.1",
+        "laravel/tinker": "^2.10.1",
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "^14.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -70,6 +74,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "beta",
     "prefer-stable": true
 }
